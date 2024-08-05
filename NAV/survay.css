@@ -1,0 +1,70 @@
+body{
+
+    background-color:	#DCDCDC;
+ }
+ #title{
+    text-align: center;
+    font-size:30px;
+/* margin: 1em auto;*/
+
+ }
+#description{
+    text-align:center;
+    font-size:20px;
+    
+}
+#survey-form{
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+  #name-label{
+    display: flex;
+  margin:0.5rem 0;
+  
+  }
+
+  #email-label{
+    display: flex;
+  margin:0.5rem 0;
+  
+  }
+  #employee-label{
+    display: flex;
+  margin:0.5rem 0;
+  
+  }
+  #department/team-label{
+     display: flex;
+      margin:0.5rem 0;
+  }
+#date-label{
+
+    display: flex;
+  margin:0.5rem 0;
+}
+
+  .back{
+    background-color: rgb(184, 184, 31);
+font-weight: 700;
+
+  }
+  fieldset{
+    width:80%;
+    margin:0 auto;
+    max-width: 500px;
+    min-width: 300px;
+    border-color: rgb(154, 148, 148);
+  }
+  hr{
+    color: black;
+    height: 1px;
+  }
+  
+textarea
+ {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
