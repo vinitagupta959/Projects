@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Survay Form</title>
+        <link rel="stylesheet" href="survay.css">
+    </head>
+    <body>
+        <fieldset>
+        <h1 id="title">Employee Health Assesssment Form</h1><hr>
+        <p id="description">Please take a few minutes to complete the survey. Your feedback is valuable to us.</p>
+        <form id="survey-form" action="" method="post">
+            <legend class="back">Personal Infomation</legend><br>
+            <label id="name-label"> Name:<input id="name" type="text" placeholder="Enter your name" required></label> 
+            <label id="email-label">Email:<input id="email" type="email" placeholder="Enter Your email" required></label>
+            <label id="employee-label"> Employee ID: <input id="employee id" type="text"> </label>
+            <label id="department/team-label">Department/team: <input id="employee" type=text" > </label> 
+            <label id="date-label">Date Of Birth:<input id="date of birth"type="date"></label>
+
+            
+            <legend >Gender: </legend>
+            <label for="male">
+            <input id="male" type="radio" name="gn" value="male">Male </label>
+            <label for="female"> 
+            <input id="female" type="radio" name="gn" value="female">Female</label>
+            <label for="other"> 
+            <input id="other" type="radio" name="gn" value="other">Other</label>
+        
+        
+         <br><br>
+            <legend class="back">Overall Health</legend>
+            <p>1.How would you rate your overall physical health?</p>
+         <label><input type="radio" name="ph" value="excellent"> Excellent</label>
+       <label> <input type="radio" name="ph" value="very good">Very good</label>
+           <label> <input type="radio" name="ph" value="good">Good</label>
+           <label> <input type="radio" name="ph" value="fail">Fair</label>
+            <label><input type="radio" name="ph" value="poor">Poor</label>
+            <br>
+            <p>2.Do you have any specific health concerns or conditions?</p>
+            <p>if yes,please specify:</p>
+            <label for="health">
+                <textarea id="health" name="health" rows="2" cols="30" placeholder="Write hear..."></textarea>
+              </label>
+         <br><br>
+         
+            <legend class="back">Lifestyle Habits</legend>
+            <p>1.Do you smoke?</p>
+           <label> <input type="radio" name="Yn" value="Yes">Yes
+            <label><input type="radio" name="Yn" value="No">No
+            <br>
+            <p>2.How often do you consume alcoholic</p>
+                <select>
+                  <option value="">(select one)</option>
+                  <option value="1">None</option>
+                  <option value="2">Occasionally(1-2times)</option>
+                  <option value="3">Regularly(3-5times)</option>
+                  <option value="4">Frequently(6 or more times)</option>
+                </select>
+            <br>
+           <p>3.How many hours of sleep do you typically get per night</p>
+         <label id="number-label"> <input id="number" min="4" max="12" type="number" placeholder="Enter hours">Enter hours</label>
+
+         
+         <br><br>
+          <legend class="back">Physical activities</legend>
+            <p>1.How often do you engage in physical exercise per week?</p>
+            <label><input type="radio" name="ni" value="never" >Never
+            <label><input type="radio" name="ni" value="rarely" >Rarely
+            <label><input type="radio" name="ni" value="occasionally" >Occasionally
+           <label> <input type="radio" name="ni" value="regularly" >Regularly
+
+            <br>
+            <p>2.What types of physical activities do you enjoy?</p>
+            <input type="checkbox" name="vi" value="walking">walking
+            <input type="checkbox" name="vi" value="running">Running
+            <input type="checkbox" name="vi" value="swimming">Swimming
+            <input type="checkbox" name="vi" value="cycling">Cycling
+            <input type="checkbox" name="vi" value="gym workout">Gym workout
+            <input type="checkbox" name="vi" value="yoga/pilates">Yoga</br>
+             
+         <br><br>
+            <legend class="back">Diet and Nutrition</legend>
+            <p>1.How would you describe your typical daily diet?</p>
+            <input type="radio" name="ta" value="healthy and balanced">Healthy and balanced
+            <input type="radio" name="ta" value="moderately healthy">Moderately healthy 
+            <input type="radio" name="ta" value="unhealthy">Unhealthy
+            <br>
+            <p>2.How often do you consume fast food or processed food per week?</p>
+            <input type="radio" name="na" value="rarely">Rarely
+            <input type="radio" name="na" value="occasionally">Occasionally
+            <input type="radio" name="na" value="frequently">Frequently
+        <br><br>
+           <legend class="back">Stress and Mental health</legend>
+           <!--- <p>On a scale of 1 ot 5,how would you rate your current stress level?</p>
+            <input type="range">-->
+            
+            <p>1.Do you experience symptoms of anxiety or depression?</p>
+            <input type="radio" name="yn" value="Yes">Yes
+            <input type="radio" name="yn" value="No">No
+            <br>
+            <p>2.Have you sought professional help for stress or mental health concerns in the past year?</p>
+            <input type="radio" name="yn" value="Yes">Yes
+            <input type="radio" name="yn" value="No">No
+            <br><br>
+           
+        
+        
+            <legend class="back">Preventive health Measures:</legend>
+            <p>1.When was your last routine health check-up?</p>
+            <select id="dropdown">
+                <option value="">Select one</option>
+                <option value="1">Within the last 6 months</option>
+                <option value="2">Within the last year</option>
+                <option value="3">More than a year ago
+                <option value="4">Never</option> 
+            </select>
+            <br>
+            <p>2.Are you up-to-date with vaccinations?</p>
+            <input type="radio" name="yn"  value="yes">Yes
+            <input type="radio" name="yn" value="No">No
+            <input type="radio" name="yn" value="Notsure">Not sure
+            <br>
+            <p>3.Have you undergone any health screenings (e.g., for cancer, diabetes, hypertension) in the past year? </p>
+            <input type="radio" name="yn"  value="yes">Yes
+            <input type="radio" name="yn" value="No">No
+         <br><br>
+            <legend class="back">Additional Comments</legend>
+            <p>Is there anything else you would like to share about your health or any specific health concerns?</p>
+            <label for="health">
+                <textarea id="health" name="health" rows="2" cols="30" placeholder="Write hear..."></textarea>
+              </label>
+         <br><br>
+         <input id="submit" type="submit" value="Submit" />
+            </fieldset>
+        </form>
+    </body>
+</html>            
+        

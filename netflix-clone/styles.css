@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    background-image: url('https://www.slashgear.com/img/gallery/netflix-4k-streaming-on-macos-big-sur-to-require-a-t2-security-chip/intro-import.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 70vh;
+    background-repeat: no-repeat;
+    position: relative;
+     background-color: transparent;
+     margin-bottom: 0;
+}
+
+.main .box {
+    height: auto;
+    width: 100%;
+    opacity: 0.9;
+    position: relative;
+    top: 0;
+    background-color: black;
+
+}
+
+.logo {
+    width: 7rem;
+}
+
+nav {
+    max-width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+
+
+}
+
+button {
+    margin-right: 0.5rem;
+}
+
+nav img {
+    width: 114px;
+    position: relative;
+    z-index: 10;
+
+}
+
+button {
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    background-color: rgb(247, 3, 3);
+    padding: 0.3rem;
+    border-radius: 5px;
+
+}
+
+.hero {
+    height: 100%;
+    text-align: center;
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5rem;
+    position: relative;
+    z-index: 10;
+    color: white;
+    padding: 23px;
+    flex-wrap: wrap;
+
+}
+
+#main-spain {
+    font-size: 28px;
+    color: white;
+    font-weight: 900;
+    position: relative;
+    z-index: 10;
+}
+
+input,
+select {
+    padding: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 0.2rem;
+    background-color: black;
+    opacity: 0.44;
+    color: white;
+    font-weight: 400;
+    
+}
+.row{
+    display: flex;
+    margin-top: 0;
+    margin-left: 2rem;
+}
+ 
