@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page with Sign-In/Log-Out</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <div class="header-icons">
+            <div class="search-icon">&#128269;</div>
+            <div class="profile-icon" onclick="toggleDropdown()">
+                &#128100;
+                <div class="dropdown" id="profileDropdown">
+                    <!-- Options that appear when the profile icon is clicked -->
+                    <a href="#" id="signInOption">Sign In</a>
+                    <a href="#" id="logOutOption" style="display: none;">Log Out</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Genres</a></li>
+            <li><a href="#">Watchlist</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <!-- Main content goes here -->
+        <section class="content">
+            <h1>Welcome to the Movie Page</h1>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

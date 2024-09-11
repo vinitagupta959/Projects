@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wraper">
+        
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>Logo</p>
+        </div>
+        <div class="nav-menu">
+        <ul>
+            <li><a href="" class="link"> Home</a></li>
+            <li><a href="" class="link">Blog</a></li>
+            <li><a href="" class="link">Services</a></li>
+            <li><a href="" class="link">about</a></li>
+            
+        </ul>
+    </div>
+        <div class="nav-button">
+           
+                <button class="btn white-btn" id="loginBtn">Sign In</button>
+                <button class="btn" id="registerBtn">Sign up</button>
+                <div class="nav-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+        </div>
+    </nav>
+<!------------------------------------form box------------------------------->
+<div class="form-box">
+    <!-- login -->
+     <div class="login-container" id="login">
+        <div class="top">
+            <span>Don't Have an accoutn? <a href="http://" onclick="register()"></a></span>
+            <header>Login</header>
+        </div>
+        <div class="input-box">
+            <input type="text" class="input-field" placeholder="
+            Username or Email">
+            <i class="fa-regular fa-user"></i>
+        </div>
+        <div class="input-box">
+            <input type="password" class="input-field" placeholder="
+            password">
+            <i class="fa-regular fa-lock"></i>
+        </div>
+        <div class="input-box">
+            <input type="submit" class="submit" value="Sign in">
+        </div>
+        <div class="two-col">
+            <div class="one">
+                <input type="checkbox" id="login-check">
+                <label for="login-check">Remember me</label>
+            </div>
+            <div class="two">
+                <label><a href="http://">Forgot password</a></label>
+            </div>
+        </div>
+     </div>
+    <!-- registration form -->
+     <div class="register-container" id="register">
+        <div class="top">
+            <span>Have an accoutn? <a href="#" onclick="login()"></a></span>
+            <header>Sign up</header>
+        </div>
+        <div class="two-forms">
+            <div class="input-row">
+                <div class="input-box">
+                    <input type="text" class="input-field name" placeholder="Firstname">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field name" placeholder="Lastname">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+            </div>
+            
+       
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="
+                Enter Your email">
+                <i class="fa-regular fa-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="
+                password">
+                <i class="fa-regular fa-lock"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="input-field" value="Register">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check">Remember me</label>
+                </div>
+                <div class="two">
+                    <label><a href="http://">Term & condition</a></label>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+
+</div>
+</body>
+</html>

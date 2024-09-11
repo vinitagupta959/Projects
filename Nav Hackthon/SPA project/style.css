@@ -1,0 +1,268 @@
+ /* Font Import and Basic Reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+
+/* Variables */
+:root {
+    --main-color: #ff2c1f;
+    --text-color: #020307;
+    --bg-color: #fff;
+}
+
+body {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+/* Header Styling */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 100px;
+    transition: 0.5s;
+}
+
+header.shadow {
+    background: var(--bg-color);
+    box-shadow: 0 0 4px rgb(14 55 54/15%);
+}
+
+header.shadow .navbar a {
+    color: var(--text-color);
+}
+
+header.shadow .logo {
+    color: var(--text-color);
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 1.1rem;
+    font-weight: 600;
+    align-items: center;
+    color: var(--bg-color);
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+/* Toggle Button Styling */
+#menu-icon {
+    display: block; /* Show on large screens */
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--main-color);
+    order: 3; /* Rightmost position */
+}
+
+/* Search Icon and Search Bar Styling */
+.search-container {
+    position: relative;
+    order: 2; /* After logo */
+}
+
+#search-bar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 200px;
+}
+
+#search-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Profile Icon and Dropdown Styling */
+.profile-container {
+    position: relative;
+    order: 1; /* Leftmost position */
+}
+
+#profile-dropdown #more-dropdown{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent background */
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px; /* Rounded corners */
+    transition: opacity 0.3s ease-in-out;
+}
+
+#profile-dropdown #more-dropdown ul{
+    list-style: none;
+    padding: 0;
+}
+
+#profile-dropdown #more-dropdown li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+#profile-dropdown #more-dropdown a {
+    color: var(--bg-color); /* Changed to fit the theme */
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    /* Logo on the left */
+    .logo {
+        order: 1; /* Ensure logo comes first */
+        font-size: 1.5rem;
+    }
+
+    /* Search bar visible on small screens */
+    .search-container {
+        order: 2; /* After logo */
+        width: 100%;
+    }
+
+    #search-bar {
+        width: 100%;
+    }
+
+    /* Toggle Button visible on small screens */
+    #menu-icon {
+        display: block;
+        order: 3; /* After search bar */
+    }
+
+    /* Profile icon order */
+    .profile-container {
+        order: 4; /* Profile icon comes last */
+    }
+}
+
+/* Dropdown Button Styling */
+.dropbtn {
+    background-color: transparent;
+    color: var(--bg-color); /* Changed to fit the theme */
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Dropdown Content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent background */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 0; /* Spacing within dropdown */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: var(--bg-color); /* Changed to fit the theme */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show the dropdown when the dropdown button is clicked */
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+/* Add a hover effect for links */
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Optional: Add a transition effect for the dropdown */
+.dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dropdown.show .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out;
+}
+/* Sidebar Styling */
+.side-bar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%); /* Center vertically */
+    width: 250px; /* Adjust the width as needed */
+    height: auto; /* Adjust the height as needed */
+    background-color: var(--bg-color);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    z-index: 999; /* Ensure it stays on top of other elements */
+}
+
+/* Sidebar Links */
+.side-bar a {
+    display: block;
+    padding: 15px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Sidebar Hover Effect */
+.side-bar a:hover {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+}
+
+/* Show Sidebar on Larger Screens */
+@media (min-width: 768px) {
+    .side-bar {
+        width: 250px; /* Width on larger screens */
+    }
+}
+
+/* Hide Sidebar on Smaller Screens */
+@media (max-width: 768px) {
+    .side-bar {
+        width: 200px; /* Adjust the width on smaller screens */
+    }
+}
+

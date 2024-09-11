@@ -1,0 +1,12 @@
+h3{
+    font-size:24px;
+    font-weight: bold;
+}
+p{
+    font-style: italic;
+    text-align: justify;
+}
+.detail{
+    background-color: aliceblue;
+    line-height: 1.8;
+}

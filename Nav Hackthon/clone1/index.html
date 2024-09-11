@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Website</title>
+    
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="#home" class="logo">
+            <i class='bx bxs-movie'></i>Sanamio
+        </a>
+
+        <!-- Search Icon and Search Bar -->
+        <div class="search-container">
+            <i class="bx bx-search" id="search-icon"></i>
+            <input type="text" id="search-bar" placeholder="Search..." class="search-bar">
+        </div>
+
+      <!-- Profile Icon and Dropdown -->
+    <div id="profileSection">
+        <img id="profileIcon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtzxjfMjne_J9GwgLaaU-NMgD2D0CWPKzVlg&s" alt="Profile Icon">
+        <div id="profileDropdown" style="display: none;">
+            <button id="profileButton" style="display: none;">Profile</button>
+            <button id="loginButton" style="display: none;">Log In</button>
+            <button id="signInButton" style="display: none;">Sign In</button>
+            <button id="logoutButton" style="display: none;">Log Out</button>
+            <button id="deleteAccountButton" style="display: none;">Delete Account</button>
+        </div>
+    </div>
+</header>
+
+<!-- Authentication Forms -->
+<div id="authSection" style="display: none;">
+    <form id="authForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <span id="passwordError" style="color: red;"></span> <!-- Error message -->
+        
+        <button type="button" id="signInBtn">Sign In</button>
+        <button type="button" id="logInBtn" style="display: none;">Log In</button>
+    </form>
+</div>
+    <!-- Sidebar -->
+    <section class="side-bar">
+        <div class="navbar">
+            <ul class="nav-menu">
+                <li><a href="#home" class="home-active"><i class='bx bxs-home'></i><span>Home</span></a></li>
+                <li><a href="#movies"><i class='bx bxs-movie'></i><span>Movies</span></a></li>
+                <li><a href="#coming"><i class='bx bxs-calendar'></i><span>Coming</span></a></li>
+                <li><a href="#newsletter"><i class='bx bxs-news'></i><span>Newsletter</span></a></li>
+            </ul>
+
+            <!-- More Dropdown -->
+            <div class="more-container">
+                <button class="more-btn"><i class="fa-solid fa-greater-than"></i></button>
+                <div class="more-dropdown">
+                    <a href="#primary">Primary</a>
+                    <a href="#watchlist">Watchlist</a>
+                    <a href="#download">Download</a>
+                    <a href="#kids-family">Kids/Family</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home -->
+    <section class="home swiper" id="home">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide container">
+                <img src="" alt="">
+                <div class="home-text">
+                    <span>Marvel Universe</span>
+                    <h1>Guardians of the Galaxy <br>Volume 2</h1>
+                    <a href="#" class="btn">Book Now</a>
+                    <a href="#" class="play"><i class='bx bx-play'></i></a>
+                </div>
+            </div>
+            <!-- Additional Swiper Slides -->
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- Movies -->
+    <div class="movies" id="movies">
+        <h2 class="heading">Opening This Week</h2>
+        <div class="movies-container">
+            <!-- Movie Boxes -->
+            <div class="box">
+                <div class="box-img">
+                    <img src="" alt="">
+                </div>
+                <h3>Dr. Strange</h3>
+                <span>120 min | Action</span>
+            </div>
+            <!-- Additional Movie Boxes -->
+        </div>
+    </div>
+
+    <!-- Coming Soon -->
+    <section class="coming" id="coming">
+        <h2 class="heading">Coming Soon</h2>
+        <div class="coming-container swiper">
+            <div class="swiper-wrapper">
+                <!-- Coming Soon Boxes -->
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="" alt="">
+                    </div>
+                    <h3>Ant-Man and the Wasp: Quantumania</h3>
+                </div>
+                <!-- Additional Coming Soon Boxes -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter" id="newsletter">
+        <h2>Subscribe To Get <br>Newsletter</h2>
+        <form action="">
+            <input type="email" class="email" placeholder="Enter Email" required>
+            <input type="submit" value="Subscribe" class="btn">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <a href="#" class="logo">
+            <i class="bx bxs-movie"></i>Sanamio
+        </a>
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+        </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>&#169; Sanamio All Right Reserved</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="form.js"></script>
+</body>
+</html>
