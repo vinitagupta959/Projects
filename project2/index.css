@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    padding: 20px;
+    align-items: center;
+}
+
+header nav a {
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 600;
+    font-style: bold;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+header nav {
+    background-color: #1C1C1C;
+    width: 400px;
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+}
+
+main h1 {
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    font-size: 80px;
+    /* height: 80px; */
+}
+
+main p {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-style: italic;
+    color: orange;
+    margin-left: 150px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 500;
+    font-style: bold;
+    text-decoration: none;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    width: 130px;
+}
+
+footer a i {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+footer nav {
+    display: flex;
+    flex-direction: row;
+    background-color: #1C1C1C;
+    position: absolute;
+    bottom: 30px;
+    border-radius: 30px;
+    width: 500px;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+footer {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
