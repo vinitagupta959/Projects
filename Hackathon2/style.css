@@ -1,0 +1,568 @@
+
+/*remove difault browser value */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+/*like a varible ek bar store karne ke bad only varible name likho vo apply ho jata hai */
+:root {
+  --background-color: linear-gradient(to left, #c7bdc7, #451a81);
+  --secondary-color: linear-gradient(to right, #dca8e3, #9f2fa4);
+  --hover-color: linear-gradient(to right, #4c0e57, #e5e5be);
+}
+body {
+  height: 100vh;
+  background: radial-gradient(
+    circle,
+    rgb(218, 212, 220) 0%,
+    rgb(91, 24, 125) 50%,
+    rgb(113, 67, 156) 70%,
+    rgb(121, 35, 174) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.front {
+  text-align: center;
+}
+.start_btn {
+  width: 100%;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: 2em;
+  color: bisque;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 65px;
+}
+.lets {
+  background: var(--secondary-color);
+  color: rgb(42, 44, 44);
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.lets:hover {
+  background: var(--hover-color);
+  color: #e5e5be;
+}
+.info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.info_box {
+  display: none;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+  width: 90vw;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.5;
+  font-size: 20px;
+  background: linear-gradient(to right, #f8dcea, #ad44ea);
+  font-weight: 500;
+}
+.info_box h3 {
+  font-size: 24px;
+  color: #4c0e57;
+  text-align: center;
+  margin-bottom: 10px;
+}
+ul {
+  padding: 5px;
+}
+li {
+  list-style-type: none;
+  font-size: 19px;
+}
+
+/* Show info_box when active class is added  ye js me hai  swith karne ke liuye use kiya hai */
+.info_box.active {
+  display: block;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.buttons .quit,
+.buttons .restart {
+  padding: 10px;
+  margin-right: 10px;
+}
+.info_box,
+.category-section,
+.question-box {
+  display: none;
+}
+.category-section {
+  display: none;
+}
+
+#input-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  border-color: #3b043b;
+  padding: 2rem;
+  width: 600px;
+  max-width: 500px;
+  border-radius: 10px;
+  background: linear-gradient(to left, #9f8d96, #6d1c9b);
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+label {
+  margin-right: 10px;
+  min-width: 80px;
+  font-size: large;
+  color: #3b043b;
+  font-weight: 700;
+}
+
+.input-container .players {
+  padding: 5px;
+  width: 330px;
+  padding: 5px;
+  border: 3px solid;
+  border-color: #6d1c9b;
+  border-radius: 10px;
+  background: var(--background-color);
+  outline-color: #9c56a4;
+  outline-width: 2px;
+}
+
+::placeholder {
+  text-transform: capitalize;
+  color: #e8deee;
+  font-size: 18px;
+}
+
+select {
+  background: linear-gradient(to left, #9f8d96, #6d1c9b);
+  padding: 5px;
+  border-radius: 10px;
+  outline-color: #c6aac9;
+  width: 230px;
+}
+
+option {
+  background: #770e8b;
+  width: 250px;
+  text-align: center;
+}
+
+.go {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  margin: 10px 5px auto;
+  background: linear-gradient(to right, #6d1c9b, #ce75e0);
+  width: 100%;
+  font-size: large;
+  font-weight: 800;
+  color: wheat;
+}
+.go:hover {
+  background: linear-gradient(to right, #8f1fa8, #eceaed);
+  color: #1f1d1f;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.question-box,
+.category-section {
+  display: none;
+}
+.question-box{
+  width: 600px;
+}
+.trun {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem;
+  width: 100%;
+  background: linear-gradient(to right, #9f8d96, #6d1c9b);
+  border: 2px solid #4c0e57;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.question-container,
+#player-turn {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box;  
+}
+#player-turn {
+  text-align: left;
+}
+.Question {
+  font-weight: 600;
+  font-size: larger;
+  text-align: center;
+  border: 2px solid #4c0e57;
+  border-radius: 10px;
+  padding: 5px;
+  background: var(--secondary-color);
+  height: auto;
+  text-wrap: wrap;
+  overflow-x: hidden;
+
+}
+
+#options-container {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;  
+}
+
+.option-item {
+  width: calc(50% - 4px);
+  padding: 10px;
+  margin: 2px;
+  border: 2px solid #4c0e57;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+
+.inner {
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #9f8d96, #6d1c9b);
+  border: 2px solid #4c0e57;
+}
+
+.user {
+  display: none;
+}
+
+#result-box {
+  display: none;
+  background:linear-gradient(to right, #ceb1e5, #441560);
+  padding: 20px;
+  border-radius: 8px;
+  color: #b7baaf;
+  text-align: left;
+  width: 400px;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(150, 21, 21, 0.1);
+  line-height: 1.5;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 15px;
+}
+#winner-text{
+  font-size: 24px;
+  color: #030110;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#final-score {
+  font-size: 20px;
+  color: #26208a;
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: #beb6c9;
+}
+
+@media (max-width: 912px) {
+  .info_box {
+    width: 890px;
+    padding: 17px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .restart {
+    padding: 2px;
+    margin-top: 2px;
+  }
+  #input-box {
+    width: 85vw;
+    padding: 1.5rem;
+  }
+
+  .input-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  label {
+    margin-bottom: 5px;
+    min-width: auto;
+    font-size: medium;
+  }
+
+  .input-container .players {
+    width: 340px;
+  }
+
+  select {
+    width: 275px;
+  }
+
+  .question-box {
+    width: 85vw;
+    padding: 15px;
+  }
+
+  .main-container {
+    width: 85vw;
+    padding: 15px;
+  }
+
+  .question-container {
+    width: 700px;
+    padding: 1rem 0.2rem;
+  }
+
+  #result-box {
+    width: 800px;
+    padding: 45px 25px;
+    font-size: 22px;
+  }
+}
+@media (max-width: 853px) {
+  #result-box {
+    width: 370px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lets {
+    font-size: 2em;
+    padding: 8px 16px;
+  }
+  .info_box {
+    width: 750px;
+    padding: 15px;
+    font-size: 17px;
+  }
+  #input-box {
+    width: 90vw;
+    padding: 1rem;
+  }
+
+  label {
+    margin-bottom: 5px;
+    min-width: auto;
+    font-size: medium;
+  }
+
+  .input-container .players {
+    width: 370px;
+  }
+
+  select {
+    width: 290px;
+  }
+}
+@media (max-width: 540px) {
+  .info_box {
+    width: 500px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  #input-box {
+    width: 90vw;
+    padding: 0.75rem;
+  }
+
+  .input-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  label {
+    margin-bottom: 5px;
+    min-width: auto;
+    font-size: medium;
+  }
+
+  .input-container .players {
+    width: 330px;
+  }
+
+  select {
+    width: 260px;
+  }
+
+  .question-container {
+    width: 450px;
+    padding: 0.9rem 0.2rem;
+  }
+  .user {
+    width: 450px;
+  }
+  #result-box {
+    width: 400px;
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .lets {
+    font-size: 2em;
+    padding: 8px 16px;
+  }
+  .info_box {
+    width: 95vw;
+    padding: 10px;
+    font-size: 15px;
+  }
+  #input-box {
+    width: 95vw;
+    padding: 0.5rem;
+  }
+  label {
+    margin-bottom: 5px;
+    min-width: auto;
+    font-size: small;
+  }
+
+  .input-container .players {
+    width: 310px;
+  }
+
+  select {
+    width: 240px;
+  }
+  .question-container {
+    width: 100%;
+    padding: 0.9rem 0.2rem;
+  }
+  .option-item {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  #input-box {
+    width: 95vw;
+    padding: 0.75rem;
+  }
+
+  .input-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  label {
+    margin-bottom: 5px;
+    min-width: auto;
+    font-size: small;
+  }
+
+  .input-container .players {
+    width: 270px;
+  }
+
+  select {
+    width: 190px;
+  }
+
+  #options-container {
+    flex-direction: column;
+    margin-top: 5px;
+  }
+  .option-item {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  #result-box {
+    width: 300px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 300px) {
+  .lets {
+    font-size: 1.2em;
+    padding: 4px 8px;
+  }
+  .info_box {
+    width: 100vw;
+    padding: 5px;
+    font-size: 14px;
+  }
+  #input-box {
+    width: 100vw;
+    padding: 0.25rem;
+  }
+
+  .input-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  label {
+    margin-bottom: 5px;
+    min-width: auto;
+    font-size: x-small;
+  }
+
+  .input-container .players {
+    width: 100%;
+  }
+
+  select {
+    width: 100%;
+  }
+}
+@media (max-width: 200px) {
+  #input-box {
+    width: 100vw;
+    padding: 0.1rem;
+  }
+
+  .input-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  label {
+    margin-bottom: 5px;
+    min-width: auto;
+    font-size: xx-small;
+  }
+
+  .input-container .players {
+    width: 100%;
+  }
+
+  select {
+    width: 100%;
+  }
+}

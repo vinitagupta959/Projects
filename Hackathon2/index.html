@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivia Master</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="front">
+      <div class="start_btn">
+        <h1>Trivia</h1>
+        <h1>Master</h1>
+        <button class="lets">Let's Go</button>
+      </div>
+    </div>
+    
+    <div class="info-container">
+      <div class="info_box">
+        <h3>Some Rules of this Quiz</h3>
+        <hr />
+        <ul>
+          <li>1. Each player has 30 seconds per question</li>
+          <li>2. Once you select your answer, it can't be undone</li>
+          <li>3. You can't select any options once time goes off</li>
+          <li>4. You can't exit the quiz while you're playing</li>
+          <li>5. You'll get points based on your correct answers</li>
+        </ul>
+        <hr />
+        <div class="buttons">
+          <button class="restart go">Continue</button>
+          <button class="quit go">Exit Quiz</button>
+        </div>
+      </div>
+    </div>
+    <div class="category-section">
+      <form action="" id="input-box">
+        <div class="input-container"><label for="player1"
+            >Player 1:-
+            <input
+              type="text"
+              placeholder="Enter player name"
+              class="players"
+              id="player1"
+            />
+          </label>
+        </div>
+        <div class="input-container">
+          <label for="player2"
+            >Player 2:-
+            <input
+              type="text"
+              placeholder="Enter player name"
+              class="players"
+              id="player2"
+            />
+          </label>
+        </div>
+        <div class="input-container">
+        <label for="category"
+          >Choose a category:-
+          <select name="category" id="category">
+            <option value="">Select One</option>
+            <option value="9">General Knowledge</option>
+            <option value="10">Books</option>
+            <option value="11">Film</option>
+            <option value="12">Music</option>
+            <option value="13">Musicals & Theatres</option>
+            <option value="14">Video Games</option>
+            <option value="15">Board Games</option>
+            <option value="17">Science & Nature</option>
+            <option value="18">Computers</option>
+            <option value="20">Mythology</option>
+            <option value="22">Geography</option>
+            <option value="23">History</option>
+            <option value="24">Politics</option>
+            <option value="25">Art</option>
+            <option value="26">Celebrities</option>
+            <option value="27">Animals</option>
+            <option value="28">Vehicles</option>
+            <option value="29">Comics</option>
+            <option value="30">Science: Gadgets</option>
+          </select>
+        </label>
+        </div>
+        <button id="nextBtn" type="submit" class="go">Next</button>
+      </form>
+    </div>
+    <div class="question-box" style="display: none">
+      <div class="main-container">
+        <div class="trun">
+          <div id="player-turn">Player 1's turn</div>
+          <div id="question-timer">Time left: 30sec</div>
+        </div>
+        <div class="inner">
+          <p class="Question" id="question-text"></p>
+          <div class="option" id="options-container">
+            <button class="option-item"></button>
+            <button class="option-item"></button>
+            <button class="option-item"></button>
+            <button class="option-item"></button>
+          </div>
+        </div>
+        <div class="user">
+          <h3 class="player1Name" id="display-player1">Player 1</h3>
+          <h3 class="player2Name" id="display-player2">Player 2</h3>
+        </div>
+      </div>
+    </div>
+    <div id="result-box" style="display: none">
+      <h2 id="winner-text"></h2>
+      <p id="final-score"></p>
+      <button class="restart go" onclick="restartGame()">Restart Game</button>
+      <button class="exit-page go" id="exit-quiz-button">Exit Quiz</button>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
