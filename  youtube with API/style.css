@@ -102,6 +102,46 @@ header {
   opacity: 0.5;
   outline: none;
 }
+
+@media (max-width: 768px) {
+  #searchbar {
+    width: 70%;
+  }
+
+  #search {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  .search-btn {
+    padding: 8px 7px;
+    font-size: 15px;
+  }
+
+  .mic-btn {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  #searchbar {
+    width: 90%;
+  }
+
+  #search {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  .search-btn {
+    padding: 6px 5px;
+    font-size: 13px;
+  }
+
+  .mic-btn {
+    font-size: 18px;
+  }
+}
 #video-icon {
     color: black;
     width: max-content;

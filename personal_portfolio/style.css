@@ -114,7 +114,7 @@ html::-webkit-scrollbar-thumb {
   }
 }
 section {
-  min-height: 100vh;
+ 
   padding: 5rem 9% 5rem;
 }
 .home {
@@ -527,6 +527,7 @@ footer{
   position: relative;
   bottom: 0;
   width: 100%;
+  
   padding: 40px 0;
   background-color: var(--main-color);
 }
